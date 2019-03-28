@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <script type="text/javascript" src="/js/src/dytitle.js"></script>
+
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<script type="text/javascript" src="/js/src/dytitle.js"></script>
+<script>
+    
+    (function(){
+      var a_idx = 0;
+      window.onclick = function(event){
+         var a = new Array("(●´∀｀●)","(´∀｀)❤","(´,,•ω•,,)","(*๓´╰╯`๓)","(●´∀｀●)","=￣ω￣=","(>▽<)","(≧∇≦)ﾉ","QwQ","我累了❤","TAT","歇歇QAQ");
+
+        var heart = document.createElement("b");  //创建b元素
+        heart.onselectstart = new Function('event.returnValue=false');  //防止拖动
+
+        document.body.appendChild(heart).innerHTML = a[a_idx];    //将b元素添加到页面上
+        a_idx = (a_idx + 1) % a.length;
+        heart.style.cssText = "position: fixed;left:-100%;";  //给p元素设置样式
+
+        var f = 1,   // 字体大小
+                  x = event.clientX - f / 2, // 横坐标
+                  y = event.clientY - f, // 纵坐标
+                  c = randomColor(),  // 随机颜色
+                  a = 1,        // 透明度
+                  s = 1.2;      // 放大缩小
+
+        var timer = setInterval(function(){   //添加定时器
+          if(a <= 0){
+            document.body.removeChild(heart);
+            clearInterval(timer);
+          }else{
+            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" + c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" + s + ");";
+
+                      y--;
+                      a -= 0.016;
+                      s += 0.002;
+          }
+        },15)
+
+      }
+       // 随机颜色
+          function randomColor() {
+
+              return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+
+          }
+    }());
+  </script>
+  
+
+  
+  
+    
+    
+  <script src="/mosishall.github.io/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/mosishall.github.io/lib/pace/pace-theme-fill-left.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/mosishall.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/mosishall.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/mosishall.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/mosishall.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/mosishall.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/mosishall.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/mosishall.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Markdown,Hexo,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="由于markdow语法简洁明了，用起来比纯文本方便，且功能不俗，用于搭建博客文章再好不过。">
+<meta name="keywords" content="Markdown,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown语法记录">
+<meta property="og:url" content="https://mosishall.github.io/2019/03/17/markdown基础语法/index.html">
+<meta property="og:site_name" content="MosiShall&#39;s Personal Blog.">
+<meta property="og:description" content="由于markdow语法简洁明了，用起来比纯文本方便，且功能不俗，用于搭建博客文章再好不过。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552919267960&di=da7aa6823bf74452a8dd046765fa99b2&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161228%2F8c20ff212ab342f2bf9c293f500ed0b2_th.jpeg">
+<meta property="og:updated_time" content="2019-03-27T13:13:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown语法记录">
+<meta name="twitter:description" content="由于markdow语法简洁明了，用起来比纯文本方便，且功能不俗，用于搭建博客文章再好不过。">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552919267960&di=da7aa6823bf74452a8dd046765fa99b2&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161228%2F8c20ff212ab342f2bf9c293f500ed0b2_th.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/mosishall.github.io/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mosishall.github.io/2019/03/17/markdown基础语法/">
+
+
+
+
+
+  <title>Markdown语法记录 | MosiShall's Personal Blog.</title>
+  
+
+
+
+
+
+
+
+
+  <script>
+    
+    (function(){
+      var a_idx = 0;
+      window.onclick = function(event){
+         var a = new Array("(●′?｀●)","(′?｀)?","(′,,?ω?,,)","(*?′╰╯`?)","(●′?｀●)","=￣ω￣=","(>▽<)","(≧?≦)?","QwQ","我累了?","TAT","歇歇QAQ");
+
+        var heart = document.createElement("b");  //创建b元素
+        heart.onselectstart = new Function('event.returnValue=false');  //防止拖动
+
+        document.body.appendChild(heart).innerHTML = a[a_idx];    //将b元素添加到页面上
+        a_idx = (a_idx + 1) % a.length;
+        heart.style.cssText = "position: fixed;left:-100%;";  //给p元素设置样式
+
+        var f = 1,   // 字体大小
+                  x = event.clientX - f / 2, // 横坐标
+                  y = event.clientY - f, // 纵坐标
+                  c = randomColor(),  // 随机颜色
+                  a = 1,        // 透明度
+                  s = 1.2;      // 放大缩小
+
+        var timer = setInterval(function(){   //添加定时器
+          if(a <= 0){
+            document.body.removeChild(heart);
+            clearInterval(timer);
+          }else{
+            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" + c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" + s + ");";
+
+                      y--;
+                      a -= 0.016;
+                      s += 0.002;
+          }
+        },15)
+
+      }
+       // 随机颜色
+          function randomColor() {
+
+              return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+
+          }
+    }());
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/mosishall.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MosiShall's Personal Blog.</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">————夕少</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/mosishall.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/mosishall.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/mosishall.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/mosishall.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/mosishall.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/mosishall.github.io/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mosishall.github.io/mosishall.github.io/2019/03/17/markdown基础语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MosiShall">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/mosishall.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MosiShall's Personal Blog.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Markdown语法记录</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T22:32:53+08:00">
+                2019-03-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-27T21:13:54+08:00">
+                2019-03-27
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/mosishall.github.io/categories/Markdown语法/" itemprop="url" rel="index">
+                    <span itemprop="name">Markdown语法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mosishall.github.io/2019/03/17/markdown基础语法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/mosishall.github.io/2019/03/17/markdown基础语法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  由于markdow语法简洁明了，用起来比纯文本方便，且功能不俗，用于搭建博客文章再好不过。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>&#x9690;&#x7EA6;&#x96F7;&#x9E23;&#xFF0C;</p>
+<p>&#x9634;&#x973E;&#x5929;&#x7A7A;&#xFF0C;</p>
+<p>&#x4F46;&#x76FC;&#x98CE;&#x96E8;&#x6765;&#x3002;</p>
+<p>&#x80FD;&#x7559;&#x4F60;&#x5728;&#x6B64; &#x3002;</p>
+</blockquote>
+<h1 id="&#x7B49;&#x7EA7;&#x6807;&#x9898;"><a href="#&#x7B49;&#x7EA7;&#x6807;&#x9898;" class="headerlink" title="&#x7B49;&#x7EA7;&#x6807;&#x9898;"></a>&#x7B49;&#x7EA7;&#x6807;&#x9898;</h1><p>&#x4EE3;&#x7801;&#xFF1A;<br></p><figure class="highlight clean"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># &#x4E00;&#x7EA7;&#x6807;&#x9898;</span><br><span class="line">## &#x4E8C;&#x7EA7;&#x6807;&#x9898;</span><br><span class="line">### &#x4E09;&#x7EA7;&#x6807;&#x9898;</span><br><span class="line">#### &#x56DB;&#x7EA7;&#x6807;&#x9898;</span><br><span class="line">##### &#x4E94;&#x7EA7;&#x6807;&#x9898;</span><br><span class="line">###### &#x516D;&#x7EA7;&#x6807;&#x9898;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6807;&#x8BB0;&#x8BED;&#x8A00;&#x7B26;&#x53F7;&#x548C;&#x6240;&#x9700;&#x8981;&#x586B;&#x5199;&#x7684;&#x6587;&#x5B57;&#x4E4B;&#x95F4;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x7B26;&#x7A7A;&#x683C; <strong>&#x5E76;&#x4E14;&#x6700;&#x591A;&#x6709;&#x516D;&#x7EA7;&#x6807;&#x9898;</strong></p>
+</blockquote>
+<p>&#x663E;&#x793A;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<h1 id="&#x4E00;&#x7EA7;&#x6807;&#x9898;"><a href="#&#x4E00;&#x7EA7;&#x6807;&#x9898;" class="headerlink" title="&#x4E00;&#x7EA7;&#x6807;&#x9898;"></a>&#x4E00;&#x7EA7;&#x6807;&#x9898;</h1><h2 id="&#x4E8C;&#x7EA7;&#x6807;&#x9898;"><a href="#&#x4E8C;&#x7EA7;&#x6807;&#x9898;" class="headerlink" title="&#x4E8C;&#x7EA7;&#x6807;&#x9898;"></a>&#x4E8C;&#x7EA7;&#x6807;&#x9898;</h2><h3 id="&#x4E09;&#x7EA7;&#x6807;&#x9898;"><a href="#&#x4E09;&#x7EA7;&#x6807;&#x9898;" class="headerlink" title="&#x4E09;&#x7EA7;&#x6807;&#x9898;"></a>&#x4E09;&#x7EA7;&#x6807;&#x9898;</h3><h4 id="&#x56DB;&#x7EA7;&#x6807;&#x9898;"><a href="#&#x56DB;&#x7EA7;&#x6807;&#x9898;" class="headerlink" title="&#x56DB;&#x7EA7;&#x6807;&#x9898;"></a>&#x56DB;&#x7EA7;&#x6807;&#x9898;</h4><h5 id="&#x4E94;&#x7EA7;&#x6807;&#x9898;"><a href="#&#x4E94;&#x7EA7;&#x6807;&#x9898;" class="headerlink" title="&#x4E94;&#x7EA7;&#x6807;&#x9898;"></a>&#x4E94;&#x7EA7;&#x6807;&#x9898;</h5><h6 id="&#x516D;&#x7EA7;&#x6807;&#x9898;"><a href="#&#x516D;&#x7EA7;&#x6807;&#x9898;" class="headerlink" title="&#x516D;&#x7EA7;&#x6807;&#x9898;"></a>&#x516D;&#x7EA7;&#x6807;&#x9898;</h6><hr>
+<h1 id="&#x5404;&#x79CD;&#x5B57;&#x4F53;"><a href="#&#x5404;&#x79CD;&#x5B57;&#x4F53;" class="headerlink" title="&#x5404;&#x79CD;&#x5B57;&#x4F53;"></a>&#x5404;&#x79CD;&#x5B57;&#x4F53;</h1><figure class="highlight asciidoc"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*&#x659C;&#x4F53;*</span></span><br><span class="line">*<span class="strong">*&#x52A0;&#x7C97;&#x5B57;&#x4F53;*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">*</span>*<span class="strong">*&#x52A0;&#x7C97;&#x4E14;&#x659C;&#x4F53;*</span>*<span class="strong">*</span></span><br><span class="line"><span class="strong">~~&#x5220;&#x9664;&#x7EBF;&#x4F60;&#x770B;&#x7684;&#x5230;&#x5417;~~</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;&#xFF1A;</strong><br><em>&#x659C;&#x4F53;</em><br><strong>&#x52A0;&#x7C97;&#x5B57;&#x4F53;</strong><br><strong><em>&#x52A0;&#x7C97;&#x4E14;&#x659C;&#x4F53;</em></strong><br><del>&#x5220;&#x9664;&#x7EBF;&#x4F60;&#x770B;&#x7684;&#x5230;&#x5417;</del></p>
+<hr>
+<h1 id="&#x5F15;&#x7528;&#x6D4B;&#x8BD5;"><a href="#&#x5F15;&#x7528;&#x6D4B;&#x8BD5;" class="headerlink" title="&#x5F15;&#x7528;&#x6D4B;&#x8BD5;"></a>&#x5F15;&#x7528;&#x6D4B;&#x8BD5;</h1><figure class="highlight ruby"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; I</span><br><span class="line"><span class="meta">&gt;&gt;</span> II</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt; III</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt; IV</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt;&gt; V</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt;&gt;&gt; VI</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt; VII</span><br><span class="line"><span class="meta">&gt;&gt;</span>&gt;&gt;&gt;&gt;&gt;&gt; VIII</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;&#xFF1A;</strong></p>
+<blockquote>
+<p>I</p>
+<blockquote>
+<p>II</p>
+<blockquote>
+<p>III</p>
+<blockquote>
+<p>IV</p>
+<blockquote>
+<p>V</p>
+<blockquote>
+<p>VI</p>
+<blockquote>
+<p>VII</p>
+<blockquote>
+<p>VIII</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="&#x5206;&#x5272;&#x7EBF;"><a href="#&#x5206;&#x5272;&#x7EBF;" class="headerlink" title="&#x5206;&#x5272;&#x7EBF;"></a>&#x5206;&#x5272;&#x7EBF;</h1><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">&#x4E0A;&#x9762;&#x7684;&#x662F;&#x5206;&#x5272;&#x7EBF;</span></span><br><span class="line"><span class="string">******</span></span><br><span class="line"><span class="string">&#x4E0A;&#x9762;&#x7684;&#x4E5F;&#x662F;&#x5206;&#x5272;&#x7EBF;</span></span><br></pre></td></tr></tbody></table></figure>
+<hr>
+<p>&#x4E0A;&#x9762;&#x7684;&#x662F;&#x5206;&#x5272;&#x7EBF;</p>
+<hr>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4E5F;&#x662F;&#x5206;&#x5272;&#x7EBF;</p>
+<hr>
+<h1 id="&#x8D85;&#x94FE;&#x63A5;&#x6D4B;&#x8BD5;&#x548C;&#x63D2;&#x5165;&#x56FE;&#x7247;"><a href="#&#x8D85;&#x94FE;&#x63A5;&#x6D4B;&#x8BD5;&#x548C;&#x63D2;&#x5165;&#x56FE;&#x7247;" class="headerlink" title="&#x8D85;&#x94FE;&#x63A5;&#x6D4B;&#x8BD5;&#x548C;&#x63D2;&#x5165;&#x56FE;&#x7247;"></a>&#x8D85;&#x94FE;&#x63A5;&#x6D4B;&#x8BD5;&#x548C;&#x63D2;&#x5165;&#x56FE;&#x7247;</h1><p>&#x8BED;&#x6CD5;&#xFF1A;[&#x94FE;&#x63A5;&#x540D;&#x79F0;][&#x6807;&#x8BB0;]<br>&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;[&#x6807;&#x8BB0;]: &#x94FE;&#x63A5;&#x5730;&#x5740; &#x201C;&#x94FE;&#x63A5;title&#x201D;</p>
+<blockquote>
+<p>&#x63D2;&#x5165;&#x56FE;&#x7247;&#x6BD4;&#x8D85;&#x94FE;&#x63A5;&#x5728;&#x5F00;&#x5934;&#x591A;&#x4E86;&#x4E00;&#x4E2A;!</p>
+</blockquote>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">&#x52A8;&#x6F2B;</span>](<span class="link">https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1552919267960&amp;di=da7aa6823bf74452a8dd046765fa99b2&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161228%2F8c20ff212ab342f2bf9c293f500ed0b2_th.jpeg &quot;&#x52A8;&#x6F2B;&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[<span class="string">&#x8D85;&#x94FE;&#x63A5;&#x5230;&#x767E;&#x5EA6;</span>](<span class="link">https://www.baidu.com</span>)</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com&quot;</span>&gt;</span></span>href&#x767E;&#x5EA6;<span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;&#xFF1A;</strong><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1552919267960&amp;di=da7aa6823bf74452a8dd046765fa99b2&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161228%2F8c20ff212ab342f2bf9c293f500ed0b2_th.jpeg" alt="&#x52A8;&#x6F2B;" title="&#x52A8;&#x6F2B;"><br><a href="https://www.baidu.com" target="_blank" rel="noopener">&#x8D85;&#x94FE;&#x63A5;&#x5230;&#x767E;&#x5EA6;</a><br><a href="https://www.baidu.com" target="_blank" rel="noopener">href&#x767E;&#x5EA6;</a></p>
+<hr>
+<h1 id="&#x6709;&#x5E8F;&#x548C;&#x65E0;&#x5E8F;&#x5217;&#x8868;"><a href="#&#x6709;&#x5E8F;&#x548C;&#x65E0;&#x5E8F;&#x5217;&#x8868;" class="headerlink" title="&#x6709;&#x5E8F;&#x548C;&#x65E0;&#x5E8F;&#x5217;&#x8868;"></a>&#x6709;&#x5E8F;&#x548C;&#x65E0;&#x5E8F;&#x5217;&#x8868;</h1><p>&#x65E0;&#x5E8F;&#x5217;&#x8868;<br></p><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x4E00;</span><br><span class="line"><span class="bullet">+ </span>&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x4E8C;</span><br><span class="line"><span class="bullet">* </span>&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x4E09;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;&#xFF1A;</strong></p>
+<ul>
+<li>&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x4E00;</li>
+</ul>
+<ul>
+<li>&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x4E8C;</li>
+</ul>
+<ul>
+<li>&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x4E09;</li>
+</ul>
+<p>&#x6709;&#x5E8F;&#x5217;&#x8868;&#xFF1A;<br></p><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x4E00;</span><br><span class="line"><span class="bullet">2. </span>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x4E8C;</span><br><span class="line"><span class="bullet">3. </span>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x4E09;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;</strong></p>
+<ol>
+<li>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x4E00;</li>
+<li>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x4E8C;</li>
+<li>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x4E09;</li>
+</ol>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5E8F;&#x53F7;&#x548C;&#x5185;&#x5BB9;&#x4E4B;&#x95F4;&#x6709;&#x7A7A;&#x683C;</p>
+</blockquote>
+<h2 id="&#x5217;&#x8868;&#x5D4C;&#x5957;"><a href="#&#x5217;&#x8868;&#x5D4C;&#x5957;" class="headerlink" title="&#x5217;&#x8868;&#x5D4C;&#x5957;"></a>&#x5217;&#x8868;&#x5D4C;&#x5957;</h2><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+ </span>&#x4E00;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   + &#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   - &#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   * &#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;&#xFF1A;</strong></p>
+<ul>
+<li>&#x4E00;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;<ul>
+<li>&#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+</ul>
+<ul>
+<li>&#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+</ul>
+<ul>
+<li>&#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> &#x4E00;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   + &#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   - &#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   * &#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line"><span class="number">2.</span> &#x4E00;&#x7EA7;&#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   <span class="number">1.</span> &#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   <span class="number">2.</span> &#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br><span class="line">   <span class="number">3.</span> &#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</span><br></pre></td></tr></tbody></table></figure>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;&#xFF1A;</strong></p>
+<ol>
+<li>&#x4E00;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;<ul>
+<li>&#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+</ul>
+<ul>
+<li>&#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+</ul>
+<ul>
+<li>&#x4E8C;&#x7EA7;&#x65E0;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+</ul>
+</li>
+<li>&#x4E00;&#x7EA7;&#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;<ol>
+<li>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+<li>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+<li>&#x6709;&#x5E8F;&#x5217;&#x8868;&#x5185;&#x5BB9;</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="&#x8868;&#x683C;&#x6D4B;&#x8BD5;"><a href="#&#x8868;&#x683C;&#x6D4B;&#x8BD5;" class="headerlink" title="&#x8868;&#x683C;&#x6D4B;&#x8BD5;"></a>&#x8868;&#x683C;&#x6D4B;&#x8BD5;</h1><figure class="highlight ruby"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name<span class="params">|sex|</span>age</span><br><span class="line"><span class="symbol">:--|</span><span class="symbol">:--</span><span class="symbol">:|--</span><span class="symbol">:</span></span><br><span class="line">&#x5C0F;&#x660E;<span class="params">|&#x7537;|</span><span class="number">12</span></span><br><span class="line">&#x5C0F;&#x7EA2;<span class="params">|&#x5973;|</span><span class="number">12</span></span><br><span class="line">&#x5C45;&#x5DE6;<span class="params">|&#x5C45;&#x4E2D;|</span>&#x5C45;&#x53F3;</span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x7B2C;&#x4E8C;&#x884C;&#x7684;&#x5192;&#x53F7;&#x63A7;&#x5236;&#x6587;&#x672C;&#x683C;&#x5F0F;&#xFF0C;&#x5DE6;&#x8FB9;&#x4E3A;&#x5DE6;&#x5BF9;&#x9F50;&#xFF0C;&#xFF0C;&#x53F3;&#x8FB9;&#x4E3A;&#x53F3;&#x5BF9;&#x9F50;&#xFF0C;&#x4E24;&#x8FB9;&#x90FD;&#x6709;&#x5219;&#x4E3A;&#x5C45;&#x4E2D;</strong></p>
+</blockquote>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">name</th>
+<th style="text-align:center">sex</th>
+<th style="text-align:right">age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x5C0F;&#x660E;</td>
+<td style="text-align:center">&#x7537;</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5C0F;&#x7EA2;</td>
+<td style="text-align:center">&#x5973;</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5C45;&#x5DE6;</td>
+<td style="text-align:center">&#x5C45;&#x4E2D;</td>
+<td style="text-align:right">&#x5C45;&#x53F3;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="&#x4EE3;&#x7801;&#x5757;&#x6D4B;&#x8BD5;"><a href="#&#x4EE3;&#x7801;&#x5757;&#x6D4B;&#x8BD5;" class="headerlink" title="&#x4EE3;&#x7801;&#x5757;&#x6D4B;&#x8BD5;"></a>&#x4EE3;&#x7801;&#x5757;&#x6D4B;&#x8BD5;</h1><ul>
+<li><p>&#x5355;&#x884C;&#x4EE3;&#x7801;</p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;tab&#x952E;&#x6216;&#x8005;4&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;</p>
+</blockquote>
+<p><code>hello world</code></p>
+</li>
+</ul>
+<ul>
+<li><p>&#x4EE3;&#x7801;&#x5757;<br>&#x4E09;&#x4E2A;esc&#x4E0B;&#x9762;&#x7684;&#x952E;&#x4F4D;&#x7B26;(&#x53CD;&#x5355;&#x5F15;&#x53F7;)`&#x62EC;&#x8D77;&#x6765;</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello World!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<hr>
+</li>
+</ul>
+<h1 id="&#x9AD8;&#x4EAE;&#x663E;&#x793A;"><a href="#&#x9AD8;&#x4EAE;&#x663E;&#x793A;" class="headerlink" title="&#x9AD8;&#x4EAE;&#x663E;&#x793A;"></a>&#x9AD8;&#x4EAE;&#x663E;&#x793A;</h1><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; &#x9AD8;&#x4EAE;&#x663E;&#x793A;</span></span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p>&#x9AD8;&#x4EAE;&#x663E;&#x793A;</p>
+</blockquote>
+<h1 id="&#x53CD;&#x659C;&#x6760;"><a href="#&#x53CD;&#x659C;&#x6760;" class="headerlink" title="&#x53CD;&#x659C;&#x6760;"></a>&#x53CD;&#x659C;&#x6760;</h1><blockquote>
+<p>&#x53CD;&#x659C;&#x6760;\&#x52A0;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x53EF;&#x8F6C;&#x4E49;&#x4E3A;&#x666E;&#x901A;&#x7B26;&#x53F7;</p>
+</blockquote>
+<h1 id="&#x590D;&#x9009;&#x6846;"><a href="#&#x590D;&#x9009;&#x6846;" class="headerlink" title="&#x590D;&#x9009;&#x6846;"></a>&#x590D;&#x9009;&#x6846;</h1><figure class="highlight accesslog"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- <span class="string">[x]</span> &#x8BA4;&#x771F;  </span><br><span class="line">- <span class="string">[ ]</span> &#x52AA;&#x529B; </span><br><span class="line">- <span class="string">[ ]</span> &#x79EF;&#x6781;</span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p>&#x663E;&#x793A;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+</blockquote>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> &#x8BA4;&#x771F;  </li>
+<li style="list-style: none"><input type="checkbox"> &#x52AA;&#x529B; </li>
+<li style="list-style: none"><input type="checkbox"> &#x79EF;&#x6781;</li>
+</ul>
+<hr>
+<h1 id="Hexo&#xFF0C;note&#x7B14;&#x8BB0;"><a href="#Hexo&#xFF0C;note&#x7B14;&#x8BB0;" class="headerlink" title="Hexo&#xFF0C;note&#x7B14;&#x8BB0;"></a>Hexo&#xFF0C;note&#x7B14;&#x8BB0;</h1><p><strong>&#x4EE3;&#x7801;&#xFF1A;</strong><br></p><figure class="highlight django"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">{% <span class="name">label</span> default@default %}</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">{% <span class="name">label</span> primary@primary %}</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">{% <span class="name">label</span> success@success %}</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">{% <span class="name">label</span> info@info %}</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">{% <span class="name">label</span> warning@warning %}</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">{% <span class="name">label</span> danger@danger %}</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;note default&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>default<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;note primary&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>primary<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;note success&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>success<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;note info&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>info<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;note warning&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>warning<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;note danger&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>danger<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;note danger no-icon&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>danger no-icon<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><strong>&#x663E;&#x793A;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</strong><br><span class="label default">default</span><br><span class="label primary">primary</span><br><span class="label success">success</span><br><span class="label info">info</span><br><span class="label warning">warning</span><br><span class="label danger">danger</span></p>
+<div class="note default"><p>default</p></div><br><div class="note primary"><p>primary</p></div><br><div class="note success"><p>success</p></div><br><div class="note info"><p>info</p></div><br><div class="note warning"><p>warning</p></div><br><div class="note danger"><p>danger</p></div><br><div class="note danger no-icon"><p>danger no-icon</p></div><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+    
+    
+    
+ <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>作者 ：</strong>
+    MosiShall
+  </li>
+  <li class="post-copyright-link">
+    <strong>博客地址 ：</strong>
+    <a href="https://mosishall.github.io/2019/03/17/markdown基础语法/" title="Markdown语法记录">https://mosishall.github.io/2019/03/17/markdown基础语法/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明 ：</strong>
+    <strong> 完整备案文档实属不易，请尊重劳动版权，转载注明出处。</strong>
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/mosishall.github.io/tags/Markdown/" rel="tag"><i class="fa fa-tag"></i> Markdown</a>
+          
+            <a href="/mosishall.github.io/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+          <div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;如果觉得还不错，五星好评哦亲&lt;)</div>
+            <div id="wpac-rating"></div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/mosishall.github.io/2019/03/27/如何使用github和hexo搭建个人博客/" rel="prev" title="使用GitHub+Hexo搭建个人博客网站">
+                使用GitHub+Hexo搭建个人博客网站 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="https://www.qwqcc.club">
+              <img class="site-author-image" itemprop="image" src="/mosishall.github.io/images/avatar.gif" alt="MosiShall">
+              </a>
+            
+              <p class="site-author-name" itemprop="name">MosiShall</p>
+              <p class="site-description motion-element" itemprop="description">夕少的个人博客站点，<br>记录生活中的一点一滴。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/mosishall.github.io/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/mosishall.github.io/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/mosishall.github.io/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/mosishall" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:mosishall@hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          <div id="days"></div>
+<script>
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("03/10/2019 15:13:14");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#等级标题"><span class="nav-number">1.</span> <span class="nav-text">等级标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#各种字体"><span class="nav-number">3.</span> <span class="nav-text">各种字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用测试"><span class="nav-number">4.</span> <span class="nav-text">引用测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">5.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#超链接测试和插入图片"><span class="nav-number">6.</span> <span class="nav-text">超链接测试和插入图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有序和无序列表"><span class="nav-number">7.</span> <span class="nav-text">有序和无序列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#列表嵌套"><span class="nav-number">7.1.</span> <span class="nav-text">列表嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格测试"><span class="nav-number">8.</span> <span class="nav-text">表格测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块测试"><span class="nav-number">9.</span> <span class="nav-text">代码块测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高亮显示"><span class="nav-number">10.</span> <span class="nav-text">高亮显示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反斜杠"><span class="nav-number">11.</span> <span class="nav-text">反斜杠</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复选框"><span class="nav-number">12.</span> <span class="nav-text">复选框</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo，note笔记"><span class="nav-number">13.</span> <span class="nav-text">Hexo，note笔记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+      
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="heart">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MosiShall</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/mosishall.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/mosishall.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/mosishall.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/mosishall.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/mosishall.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/mosishall.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/mosishall.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/mosishall.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/mosishall.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/mosishall.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/mosishall.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/mosishall.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/mosishall.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'Equ9nS1WUDn0VeATwux6yb8A-gzGzoHsz',
+        appKey: 'rvL59nBsxQjrE0LRoyHScqpA',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/mosishall.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/mosishall.github.io/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/mosishall.github.io/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "default";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "default";
+      
+          flOptions.boxForm = "vertical";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 17644,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

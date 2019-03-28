@@ -1,4 +1,4 @@
-.waifu {
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\mosishall.github.io\assets\css\APlayer.min.css"><script src="\mosishall.github.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>.waifu {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -264,13 +264,13 @@
     }
 }
 @font-face {
-  font-family: 'Flat-UI-Icons';
-  src: url('flat-ui-icons-regular.eot');
-  src: url('flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), url('flat-ui-icons-regular.woff') format('woff'), url('flat-ui-icons-regular.ttf') format('truetype'), url('flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');
+  font-family: &apos;Flat-UI-Icons&apos;;
+  src: url(&apos;flat-ui-icons-regular.eot&apos;);
+  src: url(&apos;flat-ui-icons-regular.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;), url(&apos;flat-ui-icons-regular.woff&apos;) format(&apos;woff&apos;), url(&apos;flat-ui-icons-regular.ttf&apos;) format(&apos;truetype&apos;), url(&apos;flat-ui-icons-regular.svg#flat-ui-icons-regular&apos;) format(&apos;svg&apos;);
 }
-[class^="fui-"],
-[class*="fui-"] {
-  font-family: 'Flat-UI-Icons';
+[class^=&quot;fui-&quot;],
+[class*=&quot;fui-&quot;] {
+  font-family: &apos;Flat-UI-Icons&apos;;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -280,23 +280,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .fui-cross:before {
-  content: "\e609";
+  content: &quot;\e609&quot;;
 }
 .fui-info-circle:before {
-  content: "\e60f";
+  content: &quot;\e60f&quot;;
 }
 .fui-photo:before {
-  content: "\e62a";
+  content: &quot;\e62a&quot;;
 }
 .fui-eye:before {
-  content: "\e62c";
+  content: &quot;\e62c&quot;;
 }
 .fui-chat:before {
-  content: "\e62d";
+  content: &quot;\e62d&quot;;
 }
 .fui-home:before {
-  content: "\e62e";
+  content: &quot;\e62e&quot;;
 }
 .fui-user:before {
-  content: "\e631";
-}
+  content: &quot;\e631&quot;;
+}<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
