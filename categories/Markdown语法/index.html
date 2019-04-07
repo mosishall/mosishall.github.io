@@ -7,57 +7,15 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <script type="text/javascript" src="/js/src/dytitle.js"></script>
-
+ 
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 <script type="text/javascript" src="/js/src/dytitle.js"></script>
-<script>
-    
-    (function(){
-      var a_idx = 0;
-      window.onclick = function(event){
-         var a = new Array("(●´∀｀●)","(´∀｀)❤","(´,,•ω•,,)","(*๓´╰╯`๓)","(●´∀｀●)","=￣ω￣=","(>▽<)","(≧∇≦)ﾉ","QwQ","我累了❤","TAT","歇歇QAQ");
 
-        var heart = document.createElement("b");  //创建b元素
-        heart.onselectstart = new Function('event.returnValue=false');  //防止拖动
-
-        document.body.appendChild(heart).innerHTML = a[a_idx];    //将b元素添加到页面上
-        a_idx = (a_idx + 1) % a.length;
-        heart.style.cssText = "position: fixed;left:-100%;";  //给p元素设置样式
-
-        var f = 1,   // 字体大小
-                  x = event.clientX - f / 2, // 横坐标
-                  y = event.clientY - f, // 纵坐标
-                  c = randomColor(),  // 随机颜色
-                  a = 1,        // 透明度
-                  s = 1.2;      // 放大缩小
-
-        var timer = setInterval(function(){   //添加定时器
-          if(a <= 0){
-            document.body.removeChild(heart);
-            clearInterval(timer);
-          }else{
-            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" + c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" + s + ");";
-
-                      y--;
-                      a -= 0.016;
-                      s += 0.002;
-          }
-        },15)
-
-      }
-       // 随机颜色
-          function randomColor() {
-
-              return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
-
-          }
-    }());
-  </script>
   
 
   
@@ -161,7 +119,7 @@
 <meta name="description" content="夕少的个人博客站点，记录生活中的一点一滴。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="MosiShall&#39;s Personal Blog.">
-<meta property="og:url" content="https://mosishall.github.io/categories/Markdown语法/index.html">
+<meta property="og:url" content="https://mosishall.github.io/categories/markdown语法/index.html">
 <meta property="og:site_name" content="MosiShall&#39;s Personal Blog.">
 <meta property="og:description" content="夕少的个人博客站点，记录生活中的一点一滴。">
 <meta property="og:locale" content="zh-Hans">
@@ -197,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="https://mosishall.github.io/categories/Markdown语法/">
+  <link rel="canonical" href="https://mosishall.github.io/categories/markdown语法/">
 
 
 
 
 
-  <title>分类: Markdown语法 | MosiShall's Personal Blog.</title>
+  <title>分类: markdown语法 | MosiShall's Personal Blog.</title>
   
 
 
@@ -418,7 +376,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Markdown语法<small>分类</small>
+        <h1>markdown语法<small>分类</small>
         </h1>
       </div>
 
@@ -430,17 +388,17 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/mosishall.github.io/2019/03/17/markdown基础语法/" itemprop="url">
+            <a class="post-title-link" href="/mosishall.github.io/2019/03/27/markdown文章分类和标签/" itemprop="url">
               
-                <span itemprop="name">Markdown语法记录</span>
+                <span itemprop="name">markdown文章分类和标签</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-17T22:32:53+08:00" content="2019-03-17">
-          03-17
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-27T20:56:02+08:00" content="2019-03-27">
+          03-27
         </time>
       </div>
 
@@ -1193,8 +1151,5 @@ show_date_time();
   
 
   
-</body>
-</html>
- 
 </body>
 </html>

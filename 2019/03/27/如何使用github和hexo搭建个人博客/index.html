@@ -7,57 +7,15 @@
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <script type="text/javascript" src="/js/src/dytitle.js"></script>
-
+ 
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 <script type="text/javascript" src="/js/src/dytitle.js"></script>
-<script>
-    
-    (function(){
-      var a_idx = 0;
-      window.onclick = function(event){
-         var a = new Array("(●´∀｀●)","(´∀｀)❤","(´,,•ω•,,)","(*๓´╰╯`๓)","(●´∀｀●)","=￣ω￣=","(>▽<)","(≧∇≦)ﾉ","QwQ","我累了❤","TAT","歇歇QAQ");
 
-        var heart = document.createElement("b");  //创建b元素
-        heart.onselectstart = new Function('event.returnValue=false');  //防止拖动
-
-        document.body.appendChild(heart).innerHTML = a[a_idx];    //将b元素添加到页面上
-        a_idx = (a_idx + 1) % a.length;
-        heart.style.cssText = "position: fixed;left:-100%;";  //给p元素设置样式
-
-        var f = 1,   // 字体大小
-                  x = event.clientX - f / 2, // 横坐标
-                  y = event.clientY - f, // 纵坐标
-                  c = randomColor(),  // 随机颜色
-                  a = 1,        // 透明度
-                  s = 1.2;      // 放大缩小
-
-        var timer = setInterval(function(){   //添加定时器
-          if(a <= 0){
-            document.body.removeChild(heart);
-            clearInterval(timer);
-          }else{
-            heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" + c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" + s + ");";
-
-                      y--;
-                      a -= 0.016;
-                      s += 0.002;
-          }
-        },15)
-
-      }
-       // 随机颜色
-          function randomColor() {
-
-              return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
-
-          }
-    }());
-  </script>
   
 
   
@@ -166,10 +124,12 @@
 <meta property="og:site_name" content="MosiShall&#39;s Personal Blog.">
 <meta property="og:description" content="GitHub是目前网站非常流行的代码托管平台，本篇文章记录如何使用GitHub搭建个人博客。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T12:54:09.139Z">
+<meta property="og:image" content="https://mosishall.github.io/1.jpg">
+<meta property="og:updated_time" content="2019-04-07T12:11:34.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用GitHub+Hexo搭建个人博客网站">
 <meta name="twitter:description" content="GitHub是目前网站非常流行的代码托管平台，本篇文章记录如何使用GitHub搭建个人博客。">
+<meta name="twitter:image" content="https://mosishall.github.io/1.jpg">
 
 
 
@@ -472,8 +432,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-27T20:54:09+08:00">
-                2019-03-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-07T20:11:34+08:00">
+                2019-04-07
               </time>
             
           </span>
@@ -532,7 +492,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  115
+                  111
                 </span>
               
 
@@ -581,7 +541,7 @@
 <h1 id="&#x7533;&#x8BF7;&#x521B;&#x5EFA;GitHub&#x8D26;&#x6237;"><a href="#&#x7533;&#x8BF7;&#x521B;&#x5EFA;GitHub&#x8D26;&#x6237;" class="headerlink" title="&#x7533;&#x8BF7;&#x521B;&#x5EFA;GitHub&#x8D26;&#x6237;"></a>&#x7533;&#x8BF7;&#x521B;&#x5EFA;GitHub&#x8D26;&#x6237;</h1><ol>
 <li><a href="https://github.com/join" target="_blank" rel="noopener">&#x6CE8;&#x518C;&#x4F20;&#x9001;&#x95E8;</a></li>
 <li>&#x7533;&#x8BF7;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x90AE;&#x7BB1;&#x9A8C;&#x8BC1;&#x3002;</li>
-<li>&#x767B;&#x5165;&#x81EA;&#x5DF1;&#x7684;GitHub&#x8D26;&#x6237; &#x4F20;&#x9001;&#x95E8;&#xFF08;<a href="https://github.com/&#xFF09;" target="_blank" rel="noopener">https://github.com/&#xFF09;</a></li>
+<li>&#x767B;&#x5165;&#x81EA;&#x5DF1;&#x7684;GitHub&#x8D26;&#x6237; <a href="https://github.com/" target="_blank" rel="noopener">&#x4F20;&#x9001;&#x95E8;</a><br><img src="/1.jpg"><br>4.</li>
 </ol>
 <script>
         document.querySelectorAll('.github-emoji')
