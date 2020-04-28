@@ -1907,7 +1907,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #66a806;
+  background: #ff2ada;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3255,7 +3255,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553531796012&di=dfaa762f36082decc69fd9cbf32c21e3&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201607%2F14%2F20160714204618_T2tv4.jpeg");
+  background: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
