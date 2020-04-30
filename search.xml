@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Github域名失效问题解决办法]]></title>
+    <title><![CDATA[解决无法显示GitHub图片问题]]></title>
+    <url>%2Fmosishall.github.io%2F2020%2F04%2F29%2F%E8%A7%A3%E5%86%B3%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BAGitHub%E5%9B%BE%E7%89%87%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[&#x9690;&#x7EA6;&#x96F7;&#x9E23;&#xFF0C; &#x9634;&#x973E;&#x5929;&#x7A7A;&#xFF0C; &#x4F46;&#x76FC;&#x98CE;&#x96E8;&#x6765;&#x3002; &#x80FD;&#x7559;&#x4F60;&#x5728;&#x6B64; &#x3002; &#x95EE;&#x9898;&#x63CF;&#x8FF0;&#x56E0;&#x4E3A;&#x57DF;&#x540D;&#x8FC7;&#x671F;&#x6240;&#x5F15;&#x53D1;&#x7684;dns&#x52AB;&#x6301;&#x9020;&#x6210;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x672C;&#x8EAB;dns&#x6CA1;&#x6709;&#x9519;&#x8BEF;&#xFF0C;&#x4F46;&#x5F53;dns&#x89E3;&#x6790;&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4E3A;&#x4E86;&#x9650;&#x6D41;&#xFF0C;&#x7ED9;&#x51FA;&#x7684;&#x662F;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x663E;&#x793A;&#x7684;&#x94FE;&#x63A5; &#x767E;&#x5EA6;&#x89E3;&#x91CA; &#x95EE;&#x9898;&#x89E3;&#x51B3;&#x4EE5;&#x7BA1;&#x7406;&#x5458;&#x8EAB;&#x4EFD;&#x767B;&#x5165;&#x6253;&#x5F00;C:\Windows\System32\drivers\etc&#x76EE;&#x5F55;&#x4E0B;&#x7684;hosts&#x6587;&#x4EF6;&#x628A;&#x4EE5;&#x4E0B;&#x89E3;&#x6790;&#x7C98;&#x8D34;&#x5230;hosts&#x6587;&#x4EF6;&#x672B;&#x5C3E; 12345678910111213141516192.30.253.112 github.com 192.30.253.119 gist.github.com151.101.184.133 assets-cdn.github.com151.101.184.133 raw.githubusercontent.com151.101.184.133 gist.githubusercontent.com151.101.184.133 cloud.githubusercontent.com151.101.184.133 camo.githubusercontent.com151.101.184.133 avatars0.githubusercontent.com151.101.184.133 avatars1.githubusercontent.com151.101.184.133 avatars2.githubusercontent.com151.101.184.133 avatars3.githubusercontent.com151.101.184.133 avatars4.githubusercontent.com151.101.184.133 avatars5.githubusercontent.com151.101.184.133 avatars6.githubusercontent.com151.101.184.133 avatars7.githubusercontent.com151.101.184.133 avatars8.githubusercontent.com &#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x5373;&#x53EF; document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>DNS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[解决域名过期导致无法打开GitHub个人博客问题]]></title>
     <url>%2Fmosishall.github.io%2F2020%2F04%2F26%2FGithub%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <content type="text"><![CDATA[&#x9690;&#x7EA6;&#x96F7;&#x9E23;&#xFF0C; &#x9634;&#x973E;&#x5929;&#x7A7A;&#xFF0C; &#x4F46;&#x76FC;&#x98CE;&#x96E8;&#x6765;&#x3002; &#x80FD;&#x7559;&#x4F60;&#x5728;&#x6B64; &#x3002; &#x95EE;&#x9898;&#x63CF;&#x8FF0;&#x56E0;&#x4E3A;GitHub&#x57DF;&#x540D;&#x7ED1;&#x5B9A;&#x8FC7;&#x671F;&#xFF0C;&#x5BFC;&#x81F4;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x4E0D;&#x6210;&#x529F;&#x3002; &#x95EE;&#x9898;&#x89E3;&#x51B3;1&#x3001;&#x5220;&#x9664;&#x5728;GitHub&#x7684;&#x4E2A;&#x4EBA;&#x4ED3;&#x5E93;&#x5185;&#x7684;&#x89E3;&#x6790;&#x6587;&#x4EF6;&#x3002; 2&#x3001;2&#x3001;&#x4FEE;&#x6539;GitHub&#x4ED3;&#x5E93;&#x8BBE;&#x7F6E;&#x9762;&#x677F;&#x5185;GitHubPages&#x7ED1;&#x5B9A;&#x57DF;&#x540D;&#x4E3A;&#x5F53;&#x524D;&#x53EF;&#x89E3;&#x6790;&#x57DF;&#x540D;&#x3002; document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <tags>
         <tag>Hexo</tag>
         <tag>DNS</tag>
@@ -28,8 +37,8 @@
         <category>Markdown语法</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Markdown</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -52,8 +61,8 @@
         <category>Markdown语法</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Markdown</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
